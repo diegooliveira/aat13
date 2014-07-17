@@ -2,6 +2,8 @@
 package br.com.globalcode;
 
 public class ComandoGerarPDF implements ComandoApp {
+    
+    public static final String Nome = "Gerar PDF";
 
     public void execute(ProgressPublissher publisher) {
         ConfigManager config = ConfigManager.getInstance();

@@ -4,6 +4,8 @@ package br.com.globalcode;
 
 public class ComandoNovoPedido implements ComandoApp {
 
+    public static final String Nome = "Novo Pedido";
+    
     public void execute(ProgressPublissher publisher) {
         ConfigManager config = ConfigManager.getInstance();
         String server = config.getServerName();

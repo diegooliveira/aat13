@@ -3,6 +3,8 @@ package br.com.globalcode;
 
 class ComandoExcluirPedido implements ComandoApp{
 
+    public static final String Nome = "Excluir Pedido";
+    
     public void execute(ProgressPublissher publisher) {
         ConfigManager config = ConfigManager.getInstance();
         String server = config.getServerName();
