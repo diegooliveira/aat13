@@ -21,7 +21,8 @@ public class Aplicativo extends JFrame implements ProgressPublissher, ActionList
     public Aplicativo() {
         super("Curso de Design Patterns - lab01");
         
-        fabrica = new FabricaComandoSimples();
+        FabricaComandosAbstratos fabricaCommandos = new FabricaComandosAbstratos();
+        fabrica = fabricaCommandos.build();
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel panel = montaPainelBotoes();
