@@ -8,10 +8,10 @@ public class FabricaComandoMap implements FabricaComando {
     private final Map<String, ComandoApp> comandos = new HashMap<String, ComandoApp>();
 
     public FabricaComandoMap() {
-        comandos.put(ComandoExcluirPedido.Nome, new ComandoExcluirPedido());
-        comandos.put(ComandoGerarPDF.Nome, new ComandoGerarPDF());
-        comandos.put(ComandoNovoPedido.Nome, new ComandoNovoPedido());
-        comandos.put(ComandoEnviarPedido.Nome, new ComandoEnviarPedido());
+        comandos.put(NomesComandos.ExcluirPedidos, new ComandoExcluirPedido());
+        comandos.put(NomesComandos.GerarPdf, new ComandoGerarPDF());
+        comandos.put(NomesComandos.NovoPedido, new ComandoNovoPedido());
+        comandos.put(NomesComandos.EnviarPedido, new ComandoEnviarPedido());
     }
 
     public ComandoApp criar(String nome) {

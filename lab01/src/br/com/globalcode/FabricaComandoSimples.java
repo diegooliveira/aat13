@@ -4,16 +4,16 @@ package br.com.globalcode;
 public class FabricaComandoSimples implements FabricaComando {
     
     public ComandoApp criar(String nome){
-        if (nome.equals(ComandoEnviarPedido.Nome) )
+        if (nome.equals(NomesComandos.EnviarPedido) )
             return new ComandoEnviarPedido();
         
-        else if(nome.equals(ComandoGerarPDF.Nome) )
+        else if(nome.equals(NomesComandos.GerarPdf) )
             return new ComandoGerarPDF();
         
-        else if(nome.equals(ComandoNovoPedido.Nome) )
+        else if(nome.equals(NomesComandos.NovoPedido) )
             return new ComandoNovoPedido();
         
-        else if(nome.equals(ComandoExcluirPedido.Nome) )
+        else if(nome.equals(NomesComandos.ExcluirPedidos) )
             return new ComandoExcluirPedido();
         
         else 
