@@ -1,5 +1,6 @@
 package br.com.globalcode.factory;
 
+import br.com.globalcode.command.AcionarSistemaContabilCommandAdapter;
 import br.com.globalcode.command.BaseCommand;
 import br.com.globalcode.command.EnviarPorEMail;
 import br.com.globalcode.command.ExcluirPedido;
@@ -18,6 +19,8 @@ public class CommandFactory1 implements CommandFactory{
             command = new ExcluirPedido();
         } else if (name.equals("EnviarPedido")) {
             command = new EnviarPorEMail();
+        } else if (name.equals("SistemaContabil")) {
+            command = new AcionarSistemaContabilCommandAdapter();
         }
         return command;
     }    

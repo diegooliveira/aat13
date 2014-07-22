@@ -73,11 +73,7 @@ public class Aplicativo extends JFrame {
         btGerarPDF.addActionListener(listener);
         btNovoPedido.addActionListener(listener);
         btExcluirPedido.addActionListener(listener);
-        btAcionarContabil.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                buttonIntegrarContabil_clicked();
-            }
-        });
+        btAcionarContabil.addActionListener(listener);
         
         return panel;
     }
@@ -91,9 +87,6 @@ public class Aplicativo extends JFrame {
         }
     }
     
-    public void buttonIntegrarContabil_clicked() {
-        AcionarSistemaContabil comando = new AcionarSistemaContabil();
-        comando.executarOperacaoContabil();
-    }
+   
     
 }
