@@ -7,6 +7,7 @@ public class StatusView extends AbstractStatusTela {
     }
 
     public void editar(MainUI ui) {
+        ui.mementoController.record();
         ui.setStatus(new StatusEdit());
         ui.uiEditable(true);
     }

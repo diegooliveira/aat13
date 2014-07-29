@@ -16,12 +16,14 @@ public class MainUI extends javax.swing.JFrame {
     ComputadorIterator dataIterator;
     Componente dataCurrent;
     Componente oldData;
+    MementoController mementoController;
     
     private StatusTela status = new StatusView();
 
     public MainUI() {
         initComponents();
         initApp();
+        mementoController = new MementoController(this);
     }
     
     void setStatus(StatusTela status) {
@@ -74,6 +76,15 @@ public class MainUI extends javax.swing.JFrame {
         c1.add(hd2);
         return c1;
     }
+    
+    Memento saveToMement(){
+        return new Memento(textModelo.getText());
+    }
+    
+    void loadFromMemento(Memento memento){
+        textModelo.setText(memento.getModelo());
+    }
+            
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
